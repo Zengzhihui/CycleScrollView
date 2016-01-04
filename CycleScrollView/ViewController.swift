@@ -1,0 +1,54 @@
+//
+//  ViewController.swift
+//  CycleScrollView
+//
+//  Created by zzh on 16/1/4.
+//  Copyright © 2016年 Gavin Zeng. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        let adView = GZCycleScrollView(frame: CGRectMake(0,64,view.frame.width,200))
+        adView.delegate = self
+        adView.isAutoScroll = true
+        adView.timerInterval = 5
+        view.addSubview(adView)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+}
+
+extension ViewController: GZCycleScrollViewDelegate{
+    func numberOfCells() -> Int {
+        return 10
+    }
+    
+    func setUpCell() -> UIView {
+        let label = UILabel()
+        label.textAlignment = .Center
+        label.textColor = UIColor.blackColor()
+        label.backgroundColor = UIColor.redColor()
+        return label
+    }
+    
+    func setCellModel(view: UIView, index: Int) {
+        if let label = view as? UILabel{
+            label.text = "\(index)"
+        }
+    }
+    
+    func didClickCellAtIndex(index: Int) {
+        let alertView = UIAlertView(title: "you click at index = \(index)", message: nil, delegate: nil, cancelButtonTitle: "确定")
+        alertView.show()
+    }
+}
+
