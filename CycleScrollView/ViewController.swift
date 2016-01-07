@@ -13,10 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        /// init cycle scroll view
         let adView = GZCycleScrollView(frame: CGRectMake(0,64,view.frame.width,200))
         adView.delegate = self
         adView.isAutoScroll = true
-        adView.timerInterval = 5
+        adView.timerInterval = 3
         view.addSubview(adView)
     }
 
@@ -28,10 +29,14 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: GZCycleScrollViewDelegate{
+
     func numberOfCells() -> Int {
         return 10
     }
     
+    /**
+     custom cell
+     */
     func setUpCell() -> UIView {
         let label = UILabel()
         label.textAlignment = .Center
@@ -40,6 +45,12 @@ extension ViewController: GZCycleScrollViewDelegate{
         return label
     }
     
+    /**
+     bind data
+     
+     - parameter view:  target cell
+     - parameter index: target index
+     */
     func setCellModel(view: UIView, index: Int) {
         if let label = view as? UILabel{
             label.text = "\(index)"

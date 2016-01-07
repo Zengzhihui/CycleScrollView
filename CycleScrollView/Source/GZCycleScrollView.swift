@@ -17,7 +17,7 @@ import UIKit
     func didClickCellAtIndex(index: Int)
 }
 
-//MARK: GZCycleScrollViewΩ
+//MARK: GZCycleScrollView
 class GZCycleScrollView: UIView, UIScrollViewDelegate{
     private var contentScrollView: UIScrollView!
     private var currentCell: UIView!
