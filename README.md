@@ -1,5 +1,5 @@
 # CycleScrollView
-  A cycle scrollView made by Swift
+  A cycle scrollView made by Swift. Only use three views to create and you can custom your cells.
 ## Screen Shot
 ![](http://img1.ph.126.net/VVH0xgTo7mB9hfBkUxsyAQ==/6630577383515726980.gif)
 ## How to use
