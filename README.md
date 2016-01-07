@@ -5,13 +5,13 @@
 ## How to use
 ```
 //init
-let adView = GZCycleScrollView(frame: CGRectMake(0,64,view.frame.width,200))
+    let adView = GZCycleScrollView(frame: CGRectMake(0,64,view.frame.width,200))
 
 //set delegate
-adView.delegate = self
+    adView.delegate = self
 //set autoscroll && time interval
-adView.isAutoScroll = true
-adView.timerInterval = 3
+    adView.isAutoScroll = true
+    adView.timerInterval = 3
 
 //delegate method
     func numberOfCells() -> Int {
