@@ -3,6 +3,7 @@
 ## Screen Shot
 ![](http://img1.ph.126.net/VVH0xgTo7mB9hfBkUxsyAQ==/6630577383515726980.gif)
 ## How to use
+Drag GZCycleScrollView.swift to your project.
 ```
 //init
 
